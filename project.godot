@@ -12,4 +12,5 @@ config_version=5
 
 config/name="tower defense"
 config/features=PackedStringArray("4.1", "Forward Plus")
+run/flush_stdout_on_print.debug=false
 config/icon="res://icon.svg"
