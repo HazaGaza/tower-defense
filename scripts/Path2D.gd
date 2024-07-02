@@ -1,5 +1,5 @@
 extends Path2D
-@onready var path_prefab = preload(pathfollow2d)
+@onready var path_prefab = preload("res://Prefabs/path_follow_2d.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

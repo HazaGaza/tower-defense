@@ -11,6 +11,10 @@ config_version=5
 [application]
 
 config/name="tower defense"
+run/main_scene="res://Prefabs/map_1.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-run/flush_stdout_on_print.debug=false
 config/icon="res://icon.svg"
+
+[debug]
+
+file_logging/enable_file_logging=true
