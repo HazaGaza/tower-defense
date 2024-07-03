@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b2dxysv2l1ina"]
+[gd_scene load_steps=3 format=3 uid="uid://b2dxysv2l1ina"]
+
+[ext_resource type="Script" path="res://scripts/Play.gd" id="1_4ryac"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_slso8"]
 font_size = 45
 
-[node name="Base map" type="Node2D"]
+[node name="Base_map" type="Node2D"]
 position = Vector2(0, 4)
 
 [node name="Main Menu UI" type="Label" parent="."]
@@ -21,6 +23,7 @@ offset_top = 232.0
 offset_right = 243.0
 offset_bottom = 296.0
 text = "Play"
+script = ExtResource("1_4ryac")
 
 [node name="Credits" type="Button" parent="Main Menu UI"]
 layout_mode = 0
@@ -30,3 +33,5 @@ offset_right = 243.0
 offset_bottom = 409.0
 text = "Credits
 "
+
+[connection signal="pressed" from="Main Menu UI/Play" to="Main Menu UI/Play" method="_on_pressed"]
