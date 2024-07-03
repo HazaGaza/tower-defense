@@ -1,11 +1,17 @@
-extends Node
+extends Node2D
 
+var enemy_array = []
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func _physics_process(delta):
+	turn()
 
+func turn():
+	var enemy_position = get_global_mouse_position()
+	get_node("Turret").look_at(enemy_position)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _on_range_area_entered(area):
+	enemy_array.append(area.get_parent())
+	print(enemy_array)
+
+func _on_range_area_exited(area):
+	enemy_array.erase(area.get_parent())
