@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/Path2D.gd" id="1_1bt2s"]
 [ext_resource type="Texture2D" uid="uid://q1p4b0mby1qs" path="res://Base Textures.png" id="1_mmg6h"]
-[ext_resource type="PackedScene" uid="uid://dg42rs2ujudoo" path="res://Prefabs/path_follow_2d.tscn" id="2_e4tsb"]
+[ext_resource type="PackedScene" path="res://Prefabs/path_follow_2d.tscn" id="2_e4tsb"]
 [ext_resource type="PackedScene" uid="uid://d1kgcmuth6loy" path="res://Prefabs/unit_1.tscn" id="4_wnp8c"]
 
 [sub_resource type="Curve2D" id="Curve2D_wuifa"]
