@@ -1,6 +1,7 @@
 extends Node2D
 
 var enemy_array = []
+var built = false
 
 func _physics_process(delta):
 	turn()
