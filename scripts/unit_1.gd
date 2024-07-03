@@ -12,7 +12,5 @@ func _process(delta):
 func _on_range_area_entered(area):
 	print("Sigma!")
 
-
-
 func _on_range_area_exited(area):
 	pass # Replace with function body.
