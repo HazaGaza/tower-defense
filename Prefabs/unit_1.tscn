@@ -29,3 +29,4 @@ position = Vector2(0, 10)
 shape = SubResource("CircleShape2D_56crl")
 
 [connection signal="area_entered" from="range" to="." method="_on_range_area_entered"]
+[connection signal="area_exited" from="range" to="." method="_on_range_area_exited"]
