@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://byrvhjoqnni1a"]
+
+[ext_resource type="Script" path="res://scripts/TestTower.gd" id="1_fu8vk"]
+[ext_resource type="Texture2D" uid="uid://bgbrjrojcocil" path="res://kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile181.png" id="2_otrt2"]
+[ext_resource type="Texture2D" uid="uid://bpeaahhmafh2v" path="res://kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile249.png" id="3_mbsgj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1d18j"]
+radius = 65.0308
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gs4ca"]
+
+[node name="TestTower" type="Node2D"]
+script = ExtResource("1_fu8vk")
+
+[node name="Tower" type="Sprite2D" parent="."]
+scale = Vector2(0.368, 0.4)
+texture = ExtResource("2_otrt2")
+
+[node name="TowerHead" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_mbsgj")
+
+[node name="Sight" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sight"]
+shape = SubResource("CircleShape2D_1d18j")
+
+[node name="Placement" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Placement"]
+shape = SubResource("RectangleShape2D_gs4ca")
+
+[connection signal="area_entered" from="Sight" to="." method="_on_sight_area_entered"]
+[connection signal="area_exited" from="Sight" to="." method="_on_sight_area_exited"]

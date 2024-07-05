@@ -1,8 +1,12 @@
 extends Node2D
 
-var enemy_array = []
-var built = false
 
+
+var enemies
+
+var current_enemy
+
+<<<<<<< Updated upstream
 func _process(delta):
 	turn()
 
@@ -16,3 +20,11 @@ func _on_range_area_entered(area):
 
 func _on_range_area_exited(area):
 	enemy_array.erase(area)
+=======
+func _physics_process(delta):
+	if enemies != []:
+		current_enemy = enemies[0]
+		turret.look_at(current_enemy.global_position)
+
+
+>>>>>>> Stashed changes
