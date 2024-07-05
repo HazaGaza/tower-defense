@@ -1,10 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://dg42rs2ujudoo"]
+[gd_scene load_steps=3 format=3 uid="uid://dg42rs2ujudoo"]
 
 [ext_resource type="Script" path="res://scripts/enemyFollow2D.gd" id="1_bfr1s"]
+[ext_resource type="PackedScene" uid="uid://d034mgnu0csp5" path="res://Prefabs/enemy1.tscn" id="2_afgae"]
 
 [node name="PathFollow2D" type="PathFollow2D"]
 position = Vector2(-2.31289, 252.117)
 script = ExtResource("1_bfr1s")
+
+[node name="Area2D" parent="." instance=ExtResource("2_afgae")]
 
 [node name="_Timer_20798" type="Timer" parent="."]
 wait_time = 0.2
