@@ -16,7 +16,9 @@ func _physics_process(delta):
 func _on_sight_area_entered(area):
 	if area.is_in_group("Enemy"):
 		enemies.append(area)
+		print("Sigma")
 
 func _on_sight_area_exited(area):
 	if area.is_in_group("Enemy"):
 		enemies.erase(area)
+		print("Sigma")

@@ -1,14 +1,11 @@
 extends Node2D
 
 func onready():
+	
+
+
+func _process(delta):
 	var turret = $turret
-
-var enemies
-
-var current_enemy
-
-
-func _physics_process(delta):
 	if enemies != []:
 		current_enemy = enemies[0]
 		turret.look_at(current_enemy.global_position)

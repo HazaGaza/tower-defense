@@ -1,7 +1,8 @@
 extends PathFollow2D
-class_name enemy1
+class_name enemy
 @onready var enemy_prefab = preload("res://Prefabs/enemy1.tscn")
-
+func _ready():
+	add_to_group("Enemy")
 # Called when the node enters the scene tree for the first time.
 
 func _process(delta):
