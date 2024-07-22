@@ -32,3 +32,4 @@ shape = SubResource("RectangleShape2D_gs4ca")
 
 [connection signal="area_entered" from="Sight" to="." method="_on_sight_area_entered"]
 [connection signal="area_exited" from="Sight" to="." method="_on_sight_area_exited"]
+[connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]

@@ -8,17 +8,8 @@ var enemies = []
 var current_enemy
 
 func _physics_process(delta):
-	if enemies != []:
-		var Head = $TowerHead
-		current_enemy = enemies[0]
-		Head.look_at(current_enemy.global_position)
-
-func _on_sight_area_entered(area):
-	if area.is_in_group("Enemy"):
-		enemies.append(area)
-		print("Sigma")
-
-func _on_sight_area_exited(area):
-	if area.is_in_group("Enemy"):
-		enemies.erase(area)
-		print("Sigma")
+	turn()
+	
+func turn():
+	var enemy_position = get_global_mouse_position()
+	get_node("TowerHead").look_at(enemy_position)
