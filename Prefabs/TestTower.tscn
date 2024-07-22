@@ -20,6 +20,10 @@ texture = ExtResource("2_otrt2")
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("3_mbsgj")
 
+[node name="barrel" type="Marker2D" parent="TowerHead"]
+position = Vector2(0, -26.6667)
+rotation = -1.5708
+
 [node name="Sight" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sight"]

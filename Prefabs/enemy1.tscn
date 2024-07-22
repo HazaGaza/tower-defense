@@ -16,3 +16,5 @@ shape = SubResource("RectangleShape2D_oijxx")
 [node name="TowerDefenseTile271" type="Sprite2D" parent="."]
 position = Vector2(-2, -2)
 texture = ExtResource("1_u57cl")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
