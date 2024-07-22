@@ -1,11 +1,4 @@
-extends Node2D
-
-func onready():
-	var Head = $TowerHead
-
-var enemies = []
-
-var current_enemy
+extends PhysicsBody2D
 
 func _physics_process(delta):
 	turn()
