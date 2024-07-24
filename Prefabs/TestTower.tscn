@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bpeaahhmafh2v" path="res://kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile249.png" id="3_mbsgj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1d18j"]
-radius = 65.0308
+radius = 34.1321
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gs4ca"]
 
@@ -34,5 +34,6 @@ shape = SubResource("CircleShape2D_1d18j")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Placement"]
 shape = SubResource("RectangleShape2D_gs4ca")
 
+[connection signal="area_entered" from="Sight" to="." method="_on_sight_area_entered"]
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]

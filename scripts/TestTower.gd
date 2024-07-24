@@ -15,3 +15,6 @@ func shoot():
 	var b = bullet.instantiate()
 	owner.add_child(b)
 	b.transform = $TowerHead/barrel.global_transform
+func _on_sight_area_entered(area):
+		if area.is_in_group("enemy"):
+			shoot()
