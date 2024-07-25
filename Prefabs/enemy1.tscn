@@ -162,6 +162,4 @@ sprite_frames = SubResource("SpriteFrames_vddh0")
 animation = &"Fly right"
 frame_progress = 0.624219
 
-[node name="Timer" type="Timer" parent="AnimatedSprite2D"]
-
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
