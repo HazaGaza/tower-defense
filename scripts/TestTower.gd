@@ -18,3 +18,7 @@ func shoot():
 func _on_sight_area_entered(area):
 		if area.is_in_group("enemy"):
 			shoot()
+func my_click_function():
+	var player_area = get_node("Sight")
+	if player_area.overlaps_body(self):
+		shoot()
