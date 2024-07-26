@@ -10,9 +10,14 @@ func _ready():
 
 func _process(delta):
 	anim.play("Fly right")
-	anim.flip_h
+
+
 func _on_area_entered(area):
 	if area.is_in_group("bullet"):
 		area.queue_free()
 		queue_free()
 
+
+
+func _on_timer_timeout():
+	
