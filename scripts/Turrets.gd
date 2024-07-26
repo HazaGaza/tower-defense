@@ -6,7 +6,7 @@ var enemies
 
 var current_enemy
 
-<<<<<<< Updated upstream
+
 func _process(delta):
 	turn()
 
