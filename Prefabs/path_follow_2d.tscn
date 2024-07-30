@@ -12,3 +12,5 @@ script = ExtResource("1_bfr1s")
 [node name="_Timer_20798" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[connection signal="first_turn" from="." to="Area2D" method="_on_path_follow_2d_first_turn"]

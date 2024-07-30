@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnayr16ab3s1e"]
+[gd_scene load_steps=10 format=3 uid="uid://bnayr16ab3s1e"]
 
 [ext_resource type="Script" path="res://scripts/Path2D.gd" id="1_1bt2s"]
 [ext_resource type="Script" path="res://scripts/map_1.gd" id="1_pyb5f"]
+[ext_resource type="PackedScene" uid="uid://dg42rs2ujudoo" path="res://Prefabs/path_follow_2d.tscn" id="3_7y7au"]
 [ext_resource type="PackedScene" uid="uid://byrvhjoqnni1a" path="res://Prefabs/TestTower.tscn" id="5_raeoh"]
 [ext_resource type="Texture2D" uid="uid://c5dqirjkyblby" path="res://World Tilesheet/Tileset/PNGs/Grass Tileset.png" id="5_uud2k"]
 [ext_resource type="PackedScene" uid="uid://dh1ueyaq0asbx" path="res://Prefabs/unit_ui.tscn" id="6_c7y8w"]
@@ -158,6 +159,9 @@ position = Vector2(2.38419e-07, -229)
 scale = Vector2(0.864719, 1.46354)
 curve = SubResource("Curve2D_wuifa")
 script = ExtResource("1_1bt2s")
+
+[node name="PathFollow2D" parent="Path1" instance=ExtResource("3_7y7au")]
+rotation = -0.0178296
 
 [node name="Unit Ui" parent="." instance=ExtResource("6_c7y8w")]
 

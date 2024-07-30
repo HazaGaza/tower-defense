@@ -1,5 +1,6 @@
 extends Area2D
 class_name enemy
+
 func _ready():
 	add_to_group("enemy")
 	get_node("AnimatedSprite2D").play("Fly right")
@@ -12,8 +13,10 @@ func _on_area_entered(area):
 		queue_free()
 
 func _on_timer_timeout():
-	self.wait__time = 2
 	get_node("AnimatedSprite2D").rotation_degrees -= 90
 	get_node("AnimatedSprite2D").play("Fly down")
+
+func _on_path_follow_2d_first_turn():
 	get_node("AnimatedSprite2D").play("Fly right")
-	
+	get_node("AnimatedSprite2D").flip_h
+
