@@ -1,7 +1,10 @@
-[gd_scene format=3 uid="uid://dh1ueyaq0asbx"]
+[gd_scene load_steps=2 format=3 uid="uid://dh1ueyaq0asbx"]
+
+[ext_resource type="Script" path="res://scripts/score!.gd" id="1_yso37"]
 
 [node name="Unit Ui" type="CanvasLayer"]
 layer = 100
+script = ExtResource("1_yso37")
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 843.0
@@ -22,3 +25,10 @@ offset_right = 132.0
 offset_bottom = 304.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 641.0
+offset_top = 26.0
+offset_right = 811.0
+offset_bottom = 50.0
+text = "Score = "

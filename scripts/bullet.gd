@@ -8,4 +8,3 @@ func _ready():
 	get_node("Sprite2D").rotation_degrees += 90
 
 
-

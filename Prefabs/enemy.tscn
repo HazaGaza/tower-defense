@@ -1,84 +1,81 @@
-[gd_scene load_steps=23 format=3 uid="uid://c0khfkpqoch51"]
+[gd_scene load_steps=23 format=3 uid="uid://cgqbgdjxrswna"]
 
-[ext_resource type="Script" path="res://scripts/enemy1.gd" id="1_mk37c"]
-[ext_resource type="Texture2D" uid="uid://c4c7iuqakfglb" path="res://Flying Enemies/Flying/Spritesheets/Firewasp.png" id="2_d8511"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f16r2"]
-size = Vector2(58, 33)
+[ext_resource type="Script" path="res://scripts/enemyFollow2D.gd" id="1_f0315"]
+[ext_resource type="Texture2D" uid="uid://c4c7iuqakfglb" path="res://Flying Enemies/Flying/Spritesheets/Firewasp.png" id="2_ntpld"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wqoup"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(0, 0, 96, 108)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n0lav"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(96, 0, 96, 108)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sfs3p"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(192, 0, 96, 108)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2vfy0"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(288, 0, 96, 108)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2rxqq"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(384, 0, 96, 108)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ieyn2"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(480, 0, 96, 108)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_14mvm"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(0, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ip6e"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(96, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ovnsr"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(192, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g0ji2"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(288, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i111r"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(384, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j7t7t"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(480, 192, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fxleg"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(0, 96, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ewj6t"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(96, 96, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o55cg"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(192, 96, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k1upk"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(288, 96, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fj7qw"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(384, 96, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7yvhp"]
-atlas = ExtResource("2_d8511")
+atlas = ExtResource("2_ntpld")
 region = Rect2(480, 96, 96, 96)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_cb8n0"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7nam"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -150,13 +147,28 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="enemy1" type="CharacterBody2D"]
-script = ExtResource("1_mk37c")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2fpbn"]
+size = Vector2(66, 56)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -5.5)
-shape = SubResource("RectangleShape2D_f16r2")
+[node name="enemy" type="PathFollow2D"]
+position = Vector2(-2.31289, 252.117)
+script = ExtResource("1_f0315")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_cb8n0")
+[node name="_Timer_20798" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="Timer" type="Timer" parent="CharacterBody2D"]
+wait_time = 2.6
+one_shot = true
+autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_l7nam")
 animation = &"Fly right"
+
+[node name="bodyshape" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_2fpbn")
