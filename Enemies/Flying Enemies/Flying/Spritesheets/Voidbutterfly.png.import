@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dlbfw2qe1ogxd"
-path="res://.godot/imported/Clampbeetle.png-6581095e78b929260438ad4c8fd30f76.ctex"
+uid="uid://64oqb8y2gd2t"
+path="res://.godot/imported/Voidbutterfly.png-695cd71f94b74e29853c614958e9d774.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Flying Enemies/Flying/Spritesheets/Clampbeetle.png"
-dest_files=["res://.godot/imported/Clampbeetle.png-6581095e78b929260438ad4c8fd30f76.ctex"]
+source_file="res://Enemies/Flying Enemies/Flying/Spritesheets/Voidbutterfly.png"
+dest_files=["res://.godot/imported/Voidbutterfly.png-695cd71f94b74e29853c614958e9d774.ctex"]
 
 [params]
 

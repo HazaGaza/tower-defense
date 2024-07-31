@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjoavx58ur8e"
-path="res://.godot/imported/beartowersprites.png-18cab2930be31bb2f3248244c1fee884.ctex"
+uid="uid://dijge5nwsqsh2"
+path="res://.godot/imported/Tower 01A.png-286a79f856c0e6ac2d622185ea9f77af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bear Towers/beartowersprites.png"
-dest_files=["res://.godot/imported/beartowersprites.png-18cab2930be31bb2f3248244c1fee884.ctex"]
+source_file="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers bases/PNGs/Tower 01A.png"
+dest_files=["res://.godot/imported/Tower 01A.png-286a79f856c0e6ac2d622185ea9f77af.ctex"]
 
 [params]
 

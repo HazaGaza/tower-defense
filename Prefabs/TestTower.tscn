@@ -1,8 +1,58 @@
-[gd_scene load_steps=6 format=3 uid="uid://byrvhjoqnni1a"]
+[gd_scene load_steps=13 format=3 uid="uid://byrvhjoqnni1a"]
 
 [ext_resource type="Script" path="res://scripts/TestTower.gd" id="1_fu8vk"]
-[ext_resource type="Texture2D" uid="uid://bgbrjrojcocil" path="res://kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile181.png" id="2_otrt2"]
-[ext_resource type="Texture2D" uid="uid://bpeaahhmafh2v" path="res://kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile249.png" id="3_mbsgj"]
+[ext_resource type="Texture2D" uid="uid://cjofaab30g4no" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png" id="2_knbbb"]
+[ext_resource type="Texture2D" uid="uid://dijge5nwsqsh2" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers bases/PNGs/Tower 01A.png" id="3_qnx6h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_icaqj"]
+atlas = ExtResource("2_knbbb")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o30i2"]
+atlas = ExtResource("2_knbbb")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_886ke"]
+atlas = ExtResource("2_knbbb")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p4p4i"]
+atlas = ExtResource("2_knbbb")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nm0vx"]
+atlas = ExtResource("2_knbbb")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jlncr"]
+atlas = ExtResource("2_knbbb")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k8a22"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_icaqj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o30i2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_886ke")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p4p4i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nm0vx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jlncr")
+}],
+"loop": true,
+"name": &"Firing",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1d18j"]
 radius = 34.1321
@@ -12,17 +62,22 @@ radius = 34.1321
 [node name="TestTower" type="Node2D"]
 script = ExtResource("1_fu8vk")
 
-[node name="Tower" type="Sprite2D" parent="."]
-scale = Vector2(0.368, 0.4)
-texture = ExtResource("2_otrt2")
-
-[node name="TowerHead" type="Sprite2D" parent="."]
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_mbsgj")
+[node name="TowerHead" type="AnimatedSprite2D" parent="."]
+z_index = 1
+position = Vector2(0, -10)
+scale = Vector2(0.265625, 0.242188)
+sprite_frames = SubResource("SpriteFrames_k8a22")
+animation = &"Firing"
 
 [node name="barrel" type="Marker2D" parent="TowerHead"]
-position = Vector2(0, -26.6667)
+position = Vector2(0.971512, -22.2238)
 rotation = -1.5708
+scale = Vector2(1.23871, 1.12941)
+
+[node name="Tower" type="Sprite2D" parent="."]
+position = Vector2(0, -7)
+scale = Vector2(0.265625, 0.242188)
+texture = ExtResource("3_qnx6h")
 
 [node name="Sight" type="Area2D" parent="."]
 
@@ -32,6 +87,7 @@ shape = SubResource("CircleShape2D_1d18j")
 [node name="Placement" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Placement"]
+position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_gs4ca")
 
 [connection signal="area_entered" from="Sight" to="." method="_on_sight_area_entered"]

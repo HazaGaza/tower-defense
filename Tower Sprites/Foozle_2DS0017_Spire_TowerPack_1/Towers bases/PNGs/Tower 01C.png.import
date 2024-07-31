@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oodqhn8qxb4y"
-path="res://.godot/imported/Magma Crab.png-2df1888dce6291a4a5156abadd165b4c.ctex"
+uid="uid://dwsfcwap2iav6"
+path="res://.godot/imported/Tower 01C.png-b09481e1edb62149f13c79e31e3adae1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ground Enemies/Ground/Spritesheets/Magma Crab.png"
-dest_files=["res://.godot/imported/Magma Crab.png-2df1888dce6291a4a5156abadd165b4c.ctex"]
+source_file="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers bases/PNGs/Tower 01C.png"
+dest_files=["res://.godot/imported/Tower 01C.png-b09481e1edb62149f13c79e31e3adae1.ctex"]
 
 [params]
 

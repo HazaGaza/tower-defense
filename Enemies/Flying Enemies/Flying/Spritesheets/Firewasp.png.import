@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddpl5458yxs60"
-path="res://.godot/imported/beartowerspritesalternative.png-2b7fec750a20fbdc539ccebcb3b5969a.ctex"
+uid="uid://c4c7iuqakfglb"
+path="res://.godot/imported/Firewasp.png-ad64a4b132c1d7f83753bce29074396a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bear Towers/beartowerspritesalternative.png"
-dest_files=["res://.godot/imported/beartowerspritesalternative.png-2b7fec750a20fbdc539ccebcb3b5969a.ctex"]
+source_file="res://Enemies/Flying Enemies/Flying/Spritesheets/Firewasp.png"
+dest_files=["res://.godot/imported/Firewasp.png-ad64a4b132c1d7f83753bce29074396a.ctex"]
 
 [params]
 

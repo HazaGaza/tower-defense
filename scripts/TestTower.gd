@@ -14,7 +14,6 @@ func _physics_process(delta):
 func turn():
 	get_node("TowerHead").look_at(enemy.position)
 	var global_var = get_node("TowerHead").get_rotation_degrees()
-	print(global_var)
 func select_enemy() :
 	var enemy_progress_array = []
 	for i in enemy_array:
@@ -23,22 +22,14 @@ func select_enemy() :
 	var enemy_index = enemy_progress_array.find(max_progress)
 	enemy = enemy_array[enemy_index]
 func shoot():
+	get_node("TowerHead").rotation_degrees += 135
 	gun_ready = false
 	enemy.on_hit(GameData.tower_data_["damage"])
-	await(get_tree().create_timer(GameData.tower_data_["rof"]))
 	var b = bullet.instantiate()
 	owner.add_child(b)
 	b.transform = $TowerHead/barrel.global_transform
+	await get_tree().create_timer(GameData.tower_data_["rof"]).timeout
 	gun_ready = true
-func _on_sight_area_entered(area):
-		if area.is_in_group("enemy"):
-			shoot()
-func my_click_function():
-	var player_area = get_node("Sight")
-	if player_area.overlaps_body(self):
-		shoot()
-
-
 func _on_sight_body_entered(body):
 	enemy_array.append(body.get_parent())
 	print(enemy_array)

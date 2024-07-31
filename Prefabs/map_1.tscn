@@ -151,7 +151,7 @@ position = Vector2(-1, -1)
 script = ExtResource("1_pyb5f")
 
 [node name="enemy spawn timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 0.504
 autostart = true
 
 [node name="Path1" type="Path2D" parent="."]
@@ -166,7 +166,6 @@ script = ExtResource("1_1bt2s")
 [node name="TestTower" parent="." instance=ExtResource("5_raeoh")]
 z_index = 1
 position = Vector2(353, 137)
-rotation = -1.5708
 scale = Vector2(3, 3)
 
 [node name="TileMap" type="TileMap" parent="."]

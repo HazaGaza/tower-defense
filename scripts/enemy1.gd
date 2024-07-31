@@ -13,10 +13,3 @@ func _on_timer_timeout():
 func _on_path_follow_2d_first_turn():
 	get_node("AnimatedSprite2D").play("Fly right")
 	get_node("AnimatedSprite2D").flip_h
-
-
-
-func _on_area_2d_area_entered(area):
-	if area.is_in_group("bullet"):
-		area.queue_free()
-		queue_free()

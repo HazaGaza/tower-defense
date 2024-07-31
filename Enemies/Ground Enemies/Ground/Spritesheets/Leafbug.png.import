@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bklscb288i6tu"
-path="res://.godot/imported/Flying Locust.png-9d9f15bfeb3c450b2f692ba94ddc8571.ctex"
+uid="uid://d3mmvshybr6v8"
+path="res://.godot/imported/Leafbug.png-6d3d1ce62a9fe01e24172120c31265ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Flying Enemies/Flying/Spritesheets/Flying Locust.png"
-dest_files=["res://.godot/imported/Flying Locust.png-9d9f15bfeb3c450b2f692ba94ddc8571.ctex"]
+source_file="res://Enemies/Ground Enemies/Ground/Spritesheets/Leafbug.png"
+dest_files=["res://.godot/imported/Leafbug.png-6d3d1ce62a9fe01e24172120c31265ff.ctex"]
 
 [params]
 

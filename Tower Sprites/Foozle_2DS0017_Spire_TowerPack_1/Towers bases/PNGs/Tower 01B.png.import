@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4c7iuqakfglb"
-path="res://.godot/imported/Firewasp.png-ea045a3fb7f88e9623e0a9391f0f8b2f.ctex"
+uid="uid://cjx2towmv17kh"
+path="res://.godot/imported/Tower 01B.png-1d799726ee683ab738642300de2d636e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Flying Enemies/Flying/Spritesheets/Firewasp.png"
-dest_files=["res://.godot/imported/Firewasp.png-ea045a3fb7f88e9623e0a9391f0f8b2f.ctex"]
+source_file="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers bases/PNGs/Tower 01B.png"
+dest_files=["res://.godot/imported/Tower 01B.png-1d799726ee683ab738642300de2d636e.ctex"]
 
 [params]
 

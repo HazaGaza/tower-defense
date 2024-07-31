@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d3mmvshybr6v8"
-path="res://.godot/imported/Leafbug.png-67b9030bbf044092b667bb82e6c5ee14.ctex"
+uid="uid://dlbfw2qe1ogxd"
+path="res://.godot/imported/Clampbeetle.png-ca899058fbb30b9d381b2617b1b99394.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ground Enemies/Ground/Spritesheets/Leafbug.png"
-dest_files=["res://.godot/imported/Leafbug.png-67b9030bbf044092b667bb82e6c5ee14.ctex"]
+source_file="res://Enemies/Flying Enemies/Flying/Spritesheets/Clampbeetle.png"
+dest_files=["res://.godot/imported/Clampbeetle.png-ca899058fbb30b9d381b2617b1b99394.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://64oqb8y2gd2t"
-path="res://.godot/imported/Voidbutterfly.png-9296b158f62ade423349357942d96b82.ctex"
+uid="uid://olpqcd3fton0"
+path="res://.godot/imported/Firebug.png-a5d843839417eaa4a43a067301ec64e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Flying Enemies/Flying/Spritesheets/Voidbutterfly.png"
-dest_files=["res://.godot/imported/Voidbutterfly.png-9296b158f62ade423349357942d96b82.ctex"]
+source_file="res://Enemies/Ground Enemies/Ground/Spritesheets/Firebug.png"
+dest_files=["res://.godot/imported/Firebug.png-a5d843839417eaa4a43a067301ec64e4.ctex"]
 
 [params]
 

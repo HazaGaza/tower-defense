@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://olpqcd3fton0"
-path="res://.godot/imported/Firebug.png-a17f21280c6d5e2e8e11b30aa8175f23.ctex"
+uid="uid://oodqhn8qxb4y"
+path="res://.godot/imported/Magma Crab.png-dfc4496c62e8887a5785fe7c43452674.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ground Enemies/Ground/Spritesheets/Firebug.png"
-dest_files=["res://.godot/imported/Firebug.png-a17f21280c6d5e2e8e11b30aa8175f23.ctex"]
+source_file="res://Enemies/Ground Enemies/Ground/Spritesheets/Magma Crab.png"
+dest_files=["res://.godot/imported/Magma Crab.png-dfc4496c62e8887a5785fe7c43452674.ctex"]
 
 [params]
 
