@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1xje5qjn5q27"]
+
+[ext_resource type="Texture2D" uid="uid://dx8nfshm0lhr2" path="res://kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile249.png" id="1_jf0ds"]
+
+[node name="Panel" type="Panel"]
+offset_right = 142.0
+offset_bottom = 134.0
+
+[node name="TowerDefenseTile249" type="Sprite2D" parent="."]
+position = Vector2(67, 69)
+scale = Vector2(1.40625, 1.45313)
+texture = ExtResource("1_jf0ds")
