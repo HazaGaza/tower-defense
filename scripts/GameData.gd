@@ -1,3 +1,3 @@
 extends Node
 
-var tower_data_ ={ "damage": 50, "rof": 3, "range": 350}
+var tower_data_ ={ "damage": 50, "rof": 0.5, "range": 350}
