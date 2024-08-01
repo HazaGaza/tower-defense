@@ -1,5 +1,6 @@
 extends CharacterBody2D
 class_name enemy
+@onready var anim_tree = get_node("Animationtree")
 
 func _ready():
 	add_to_group("enemy")

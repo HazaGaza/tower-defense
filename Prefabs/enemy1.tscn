@@ -156,6 +156,7 @@ script = ExtResource("1_72qol")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_d6htj")
 animation = &"Fly right"
+frame = 5
 
 [node name="Timer" type="Timer" parent="AnimatedSprite2D"]
 wait_time = 2.6
