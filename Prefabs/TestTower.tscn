@@ -64,13 +64,14 @@ script = ExtResource("1_fu8vk")
 
 [node name="TowerHead" type="AnimatedSprite2D" parent="."]
 z_index = 1
-position = Vector2(-1, -9)
+position = Vector2(0, -8)
 scale = Vector2(0.265625, 0.242188)
 sprite_frames = SubResource("SpriteFrames_k8a22")
 animation = &"Firing"
+offset = Vector2(0, -16.5161)
 
 [node name="barrel" type="Marker2D" parent="TowerHead"]
-position = Vector2(0.971512, -22.2238)
+position = Vector2(0, -33.0322)
 scale = Vector2(1.23871, 1.12941)
 
 [node name="Tower" type="Sprite2D" parent="."]
@@ -89,6 +90,5 @@ shape = SubResource("CircleShape2D_1d18j")
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_gs4ca")
 
-[connection signal="area_entered" from="Sight" to="." method="_on_sight_area_entered"]
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]

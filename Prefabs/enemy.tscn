@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cgqbgdjxrswna"]
+[gd_scene load_steps=24 format=3 uid="uid://cgqbgdjxrswna"]
 
 [ext_resource type="Script" path="res://scripts/enemyFollow2D.gd" id="1_f0315"]
 [ext_resource type="Texture2D" uid="uid://c4c7iuqakfglb" path="res://Enemies/Flying Enemies/Flying/Spritesheets/Firewasp.png" id="2_n8m88"]
+[ext_resource type="Texture2D" uid="uid://dglcvkdhi0ylh" path="res://World Tilesheet/new_gradient_texture_2d.tres" id="3_rjdcg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wqoup"]
 atlas = ExtResource("2_n8m88")
@@ -148,27 +149,29 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2fpbn"]
-size = Vector2(66, 56)
+size = Vector2(58, 32)
 
 [node name="enemy" type="PathFollow2D"]
-position = Vector2(-2.31289, 252.117)
 script = ExtResource("1_f0315")
 
-[node name="_Timer_20798" type="Timer" parent="."]
-wait_time = 0.2
-one_shot = true
-
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-
-[node name="Timer" type="Timer" parent="CharacterBody2D"]
-wait_time = 2.6
-one_shot = true
-autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_l7nam")
 animation = &"Fly right"
 
+[node name="healthbar" type="TextureProgressBar" parent="CharacterBody2D"]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 36.0
+offset_bottom = -27.0
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("3_rjdcg")
+texture_progress = ExtResource("3_rjdcg")
+tint_under = Color(0.4, 0.4, 0.4, 1)
+tint_progress = Color(0, 0.772549, 0, 1)
+
 [node name="bodyshape" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, -1)
+position = Vector2(-1, -6)
 shape = SubResource("RectangleShape2D_2fpbn")
