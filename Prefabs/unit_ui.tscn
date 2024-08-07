@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dh1ueyaq0asbx"]
+[gd_scene load_steps=3 format=3 uid="uid://dh1ueyaq0asbx"]
 
 [ext_resource type="Script" path="res://scripts/score!.gd" id="1_yso37"]
+[ext_resource type="PackedScene" uid="uid://c1xje5qjn5q27" path="res://Prefabs/unit 1 panel.tscn" id="2_ai2qs"]
 
 [node name="Unit Ui" type="CanvasLayer"]
 layer = 100
@@ -32,3 +33,33 @@ offset_top = 26.0
 offset_right = 811.0
 offset_bottom = 50.0
 text = "Score = "
+
+[node name="Panel2" parent="." instance=ExtResource("2_ai2qs")]
+offset_left = 880.0
+offset_top = 36.0
+offset_right = 966.0
+offset_bottom = 121.0
+
+[node name="Panel4" parent="." instance=ExtResource("2_ai2qs")]
+offset_left = 880.0
+offset_top = 36.0
+offset_right = 966.0
+offset_bottom = 121.0
+
+[node name="Panel6" parent="." instance=ExtResource("2_ai2qs")]
+offset_left = 1025.0
+offset_top = 37.0
+offset_right = 1111.0
+offset_bottom = 122.0
+
+[node name="Panel5" parent="." instance=ExtResource("2_ai2qs")]
+offset_left = 880.0
+offset_top = 154.0
+offset_right = 966.0
+offset_bottom = 239.0
+
+[node name="Panel3" parent="." instance=ExtResource("2_ai2qs")]
+offset_left = 880.0
+offset_top = 36.0
+offset_right = 966.0
+offset_bottom = 121.0

@@ -58,6 +58,7 @@ animations = [{
 radius = 76.99
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gs4ca"]
+size = Vector2(16, 17)
 
 [node name="TestTower" type="Node2D"]
 script = ExtResource("1_fu8vk")
@@ -87,7 +88,7 @@ shape = SubResource("CircleShape2D_1d18j")
 [node name="Placement" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Placement"]
-position = Vector2(0, -1)
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_gs4ca")
 
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]

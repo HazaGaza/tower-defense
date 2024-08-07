@@ -24,6 +24,10 @@ TopScore="*res://scripts/top_score.gd"
 
 file_logging/enable_file_logging=true
 
+[display]
+
+mouse_cursor/custom_image="res://kenney_ui-pack-rpg-expansion/PNG/cursorGauntlet_blue.png"
+
 [input]
 
 mouse1={

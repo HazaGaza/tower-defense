@@ -13,6 +13,7 @@ func _physics_process(delta):
 		enemy = null
 func turn():
 	get_node("TowerHead").look_at(enemy.position)
+	get_node("TowerHead/barrel").look_at(enemy.position)
 func select_enemy() :
 	var enemy_progress_array = []
 	for i in enemy_array:
