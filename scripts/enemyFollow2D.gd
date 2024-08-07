@@ -8,7 +8,7 @@ func _ready():
 	health_bar.max_value = hp
 	health_bar.value = hp
 
-func _process(delta):
+func _physics_process(delta):
 	move(delta)
 func move(delta):
 	set_progress(get_progress() + speed * delta )

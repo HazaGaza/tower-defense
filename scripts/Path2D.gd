@@ -12,5 +12,5 @@ func _on_enemy_spawn_timer_timeout():
 	print("Path created")
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	pass

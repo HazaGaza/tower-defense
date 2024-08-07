@@ -8,5 +8,5 @@ func _on_path_follow_2d_score():
 	score += 1
 	print("sigma")
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _physics_process(delta):
 	pass

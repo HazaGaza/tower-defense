@@ -30,5 +30,4 @@ func _on_sight_body_entered(body):
 	print(enemy_array)
 
 func _on_sight_body_exited(body):
-	enemy_array.remove(body.get_parent())
-	print(enemy_array)
+	enemy_array.erase(body.get_parent())
