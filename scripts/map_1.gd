@@ -12,4 +12,8 @@ func _physics_process(delta):
 
 
 func _on_corner_1_body_entered(body):
-	print(body)
+	pass
+
+
+func _on_end_body_entered(body):
+	body.queue_free()

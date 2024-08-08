@@ -9,7 +9,7 @@ font_size = 45
 position = Vector2(0, 4)
 script = ExtResource("1_6ggoi")
 
-[node name="Main Menu UI" type="Label" parent="."]
+[node name="main_menu_ui" type="Label" parent="."]
 offset_left = 406.0
 offset_top = 63.0
 offset_right = 735.0
@@ -17,7 +17,7 @@ offset_bottom = 130.0
 text = "Tower Defense"
 label_settings = SubResource("LabelSettings_slso8")
 
-[node name="Credits" type="Button" parent="Main Menu UI"]
+[node name="Credits" type="Button" parent="main_menu_ui"]
 layout_mode = 0
 offset_left = 83.0
 offset_top = 345.0
@@ -26,7 +26,7 @@ offset_bottom = 409.0
 text = "Credits
 "
 
-[node name="Play" type="Button" parent="Main Menu UI"]
+[node name="Play" type="Button" parent="main_menu_ui"]
 layout_mode = 0
 offset_left = 84.0
 offset_top = 136.0
@@ -34,7 +34,7 @@ offset_right = 244.0
 offset_bottom = 200.0
 text = "Play"
 
-[node name="Quit" type="Button" parent="Main Menu UI"]
+[node name="Quit" type="Button" parent="main_menu_ui"]
 layout_mode = 0
 offset_left = 81.0
 offset_top = 446.0
@@ -43,7 +43,7 @@ offset_bottom = 510.0
 text = "Quit
 "
 
-[node name="Settings" type="Button" parent="Main Menu UI"]
+[node name="Settings" type="Button" parent="main_menu_ui"]
 layout_mode = 0
 offset_left = 84.0
 offset_top = 237.0
@@ -51,7 +51,7 @@ offset_right = 244.0
 offset_bottom = 301.0
 text = "Settings"
 
-[connection signal="pressed" from="Main Menu UI/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Main Menu UI/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Main Menu UI/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="Main Menu UI/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="main_menu_ui/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="main_menu_ui/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="main_menu_ui/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="main_menu_ui/Settings" to="." method="_on_settings_pressed"]

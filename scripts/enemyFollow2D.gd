@@ -1,5 +1,4 @@
 extends PathFollow2D
-signal first_turn
 var speed = 150
 var hp = 100
 @onready var health_bar = get_node("CharacterBody2D/healthbar")
@@ -7,6 +6,7 @@ var hp = 100
 func _ready():
 	health_bar.max_value = hp
 	health_bar.value = hp
+	
 
 func _physics_process(delta):
 	move(delta)

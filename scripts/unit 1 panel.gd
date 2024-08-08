@@ -9,6 +9,8 @@ func _on_gui_input(event):
 		#left click clicked
 		add_child(tempTower)
 		tempTower.process_mode = Node.PROCESS_MODE_DISABLED
+		
+		tempTower.scale = Vector2(3,3)
 	elif event is InputEventMouseMotion and event.button_mask == 1:
 		#left click drag
 		get_child(1).global_position = event.global_position
@@ -16,7 +18,7 @@ func _on_gui_input(event):
 		#left click released
 		print("Left Button Up")
 		get_child(1).queue_free()
-		var path = get_tree().get_node("res://Prefabs/map_1.tscn")
-		
+		var path = get_tree().get_root()
+		tempTower.global_position = event.global_position
+		tempTower.scale = Vector2(3,3)
 		path.add_child(tempTower)
-		tempTower.global_postion = event.global_position

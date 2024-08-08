@@ -12,8 +12,9 @@ func _physics_process(delta):
 	else:
 		enemy = null
 func turn():
-	get_node("TowerHead").look_at(enemy.position)
+	get_node("TowerHead").look_at(enemy.global_position)
 	get_node("TowerHead/barrel").look_at(enemy.position)
+	get_node("TowerHead").rotation_degrees += 90
 func select_enemy() :
 	var enemy_progress_array = []
 	for i in enemy_array:
@@ -28,7 +29,6 @@ func shoot():
 	gun_ready = true
 func _on_sight_body_entered(body):
 	enemy_array.append(body.get_parent())
-	print(enemy_array)
 
 func _on_sight_body_exited(body):
 	enemy_array.erase(body.get_parent())
