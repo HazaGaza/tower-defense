@@ -43,5 +43,5 @@ script = ExtResource("1_umdbx")
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_wukpy")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="ArrowProjectile" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_clvtg")
