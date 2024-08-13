@@ -1,12 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://bw8clbglisujt"]
+[gd_scene load_steps=8 format=3 uid="uid://bw8clbglisujt"]
 
-[ext_resource type="Texture2D" uid="uid://cim0ajtosw0q0" path="res://kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile251.png" id="1_p6bsg"]
 [ext_resource type="Script" path="res://scripts/bullet.gd" id="1_umdbx"]
+[ext_resource type="Texture2D" uid="uid://bwd0d1m02rpvv" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Projectile.png" id="2_36x2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wukpy"]
 size = Vector2(20, 36)
 
-[node name="bullet!" type="Area2D"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f4ri"]
+atlas = ExtResource("2_36x2q")
+region = Rect2(0, 0, 8, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kay3o"]
+atlas = ExtResource("2_36x2q")
+region = Rect2(8, 0, 8, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1eiy6"]
+atlas = ExtResource("2_36x2q")
+region = Rect2(16, 0, 8, 40)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_clvtg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f4ri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kay3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1eiy6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Arrow" type="Area2D"]
 rotation = 1.5708
 script = ExtResource("1_umdbx")
 
@@ -14,5 +43,5 @@ script = ExtResource("1_umdbx")
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_wukpy")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_p6bsg")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_clvtg")

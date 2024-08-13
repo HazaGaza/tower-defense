@@ -6,7 +6,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
+func _physics_process(_delta):
 	pass
 
 
@@ -18,8 +18,8 @@ func _on_play_pressed():
 	var new_scene_resource = load("res://Prefabs/map_1.tscn") # Load the new level from disk
 	var new_scene_node = new_scene_resource.instantiate() # Create an actual node of it for the game to use
 	root_node.add_child(new_scene_node) # Add to the tree so the level starts processing
-	var scene_node = get_tree().get_root().get_node("main_menu_ui")
-	scene_node.queue_free()
+	#var scene_node = get_tree().get_root().get_node("main_menu_ui")
+	#scene_node.queue_free()
 
 
 func _on_quit_pressed():

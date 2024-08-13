@@ -1,5 +1,6 @@
 extends Node2D
 @onready var bullet = preload("res://Prefabs/bullet!.tscn")
+@onready var animated_sprite = $TowerHead
 var enemy_array = []
 var enemy
 var gun_ready = true
@@ -8,6 +9,7 @@ func _physics_process(delta):
 		select_enemy()
 		turn()
 		if gun_ready == true:
+			animated_sprite.play("Firing")
 			shoot()
 	else:
 		enemy = null
