@@ -6,7 +6,7 @@ var hp = 100
 func _ready():
 	health_bar.max_value = hp
 	health_bar.value = hp
-	
+	add_to_group("enemy")
 
 func _physics_process(delta):
 	move(delta)

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bwd0d1m02rpvv" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Projectile.png" id="2_36x2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wukpy"]
-size = Vector2(20, 36)
+size = Vector2(7, 39)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6f4ri"]
 atlas = ExtResource("2_36x2q")
@@ -40,8 +40,10 @@ rotation = 1.5708
 script = ExtResource("1_umdbx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 1)
+position = Vector2(-0.499998, -0.499998)
 shape = SubResource("RectangleShape2D_wukpy")
 
 [node name="ArrowProjectile" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_clvtg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

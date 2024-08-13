@@ -10,10 +10,6 @@ func _physics_process(delta):
 		select_enemy()
 		turn()
 		if gun_ready == true:
-			animated_sprite.play("Firing") 
-			arrow.instantiate()
-			arrow.position = 
-			get_parent().add_child(arrow)
 			shoot()
 	else:
 		enemy = null
@@ -29,6 +25,10 @@ func select_enemy() :
 	var enemy_index = enemy_progress_array.find(max_offset)
 	enemy = enemy_array[enemy_index]
 func shoot():
+	animated_sprite.play("Firing") 
+	var b = arrow.instantiate()
+	get_parent().add_child(b)
+	b.transform = $TowerHead/barrel.global_transform
 	gun_ready = false
 	enemy.on_hit(GameData.tower_data_["damage"])
 	await get_tree().create_timer(GameData.tower_data_["rof"]).timeout
