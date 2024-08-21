@@ -1,7 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1xje5qjn5q27"]
+[gd_scene load_steps=6 format=3 uid="uid://c1xje5qjn5q27"]
 
-[ext_resource type="Texture2D" uid="uid://bpeaahhmafh2v" path="res://kenney_tower-defense-top-down/PNG/Default size/towerDefense_tile249.png" id="1_jf0ds"]
 [ext_resource type="Script" path="res://scripts/unit 1 panel.gd" id="1_xs1fy"]
+[ext_resource type="Texture2D" uid="uid://dijge5nwsqsh2" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers bases/PNGs/Tower 01A.png" id="2_kc8xp"]
+[ext_resource type="Texture2D" uid="uid://cjofaab30g4no" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png" id="3_it6pm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilfo4"]
+atlas = ExtResource("3_it6pm")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xoitw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilfo4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
 
 [node name="Panel" type="Panel"]
 offset_left = 1.0
@@ -10,8 +31,14 @@ offset_right = 87.0
 offset_bottom = 87.0
 script = ExtResource("1_xs1fy")
 
-[node name="TowerDefenseTile249" type="Sprite2D" parent="."]
-position = Vector2(43, 42)
-texture = ExtResource("1_jf0ds")
+[node name="Tower01a" type="Sprite2D" parent="."]
+position = Vector2(44, 32)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_kc8xp")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tower01a"]
+position = Vector2(0, -13)
+sprite_frames = SubResource("SpriteFrames_xoitw")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

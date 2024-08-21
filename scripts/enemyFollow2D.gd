@@ -1,6 +1,7 @@
 extends PathFollow2D
 var speed = 150
-var hp = 100
+var hp = 40
+signal death
 @onready var health_bar = get_node("CharacterBody2D/healthbar")
 
 func _ready():
@@ -17,4 +18,5 @@ func on_hit(damage):
 	health_bar.value = hp
 	if hp <= 0:
 		print("sigma")
+		death.emit()
 		self.queue_free()

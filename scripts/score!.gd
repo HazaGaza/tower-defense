@@ -1,8 +1,7 @@
 extends CanvasLayer
-# Called when the node enters the scene tree for the first time.
+var score = 0
 func _ready():
-	var score = TopScore.score
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta):
-	var score = TopScore.score
+		get_node("RichTextLabel").set_text("Score = "+str(score))
+func _on_enemy_death():
+	score += 1
 	get_node("RichTextLabel").set_text("Score = "+str(score))

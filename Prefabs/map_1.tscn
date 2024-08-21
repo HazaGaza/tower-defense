@@ -1,10 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://bnayr16ab3s1e"]
+[gd_scene load_steps=10 format=3 uid="uid://bnayr16ab3s1e"]
 
 [ext_resource type="Script" path="res://scripts/Path2D.gd" id="1_1bt2s"]
 [ext_resource type="Script" path="res://scripts/map_1.gd" id="1_pyb5f"]
-[ext_resource type="PackedScene" uid="uid://byrvhjoqnni1a" path="res://Prefabs/TestTower.tscn" id="5_raeoh"]
 [ext_resource type="Texture2D" uid="uid://c5dqirjkyblby" path="res://World Tilesheet/Tileset/PNGs/Grass Tileset.png" id="5_uud2k"]
-[ext_resource type="PackedScene" uid="uid://dh1ueyaq0asbx" path="res://Prefabs/unit_ui.tscn" id="6_c7y8w"]
 [ext_resource type="Script" path="res://scripts/top_score.gd" id="7_lwbvs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m425x"]
@@ -173,13 +171,6 @@ position = Vector2(2.38419e-07, -229)
 scale = Vector2(0.864719, 1.46354)
 curve = SubResource("Curve2D_wuifa")
 script = ExtResource("1_1bt2s")
-
-[node name="Unit Ui" parent="." instance=ExtResource("6_c7y8w")]
-
-[node name="TestTower" parent="." instance=ExtResource("5_raeoh")]
-z_index = 1
-position = Vector2(184, 346)
-scale = Vector2(3, 3)
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(450, 311)

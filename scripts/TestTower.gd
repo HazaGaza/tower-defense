@@ -31,8 +31,9 @@ func shoot():
 	b.transform = $TowerHead/barrel.global_transform
 	gun_ready = false
 	enemy.on_hit(GameData.tower_data_["damage"])
-	await get_tree().create_timer(GameData.tower_data_["rof"]).timeout
+	await get_tree().create_timer(GameData.tower_data_["rof"]).timeout 
 	gun_ready = true
+	
 func _on_sight_body_entered(body):
 	enemy_array.append(body.get_parent())
 
