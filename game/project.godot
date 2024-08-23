@@ -1,0 +1,43 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="tower defense"
+run/main_scene="res://Prefabs/main_menu.tscn"
+config/features=PackedStringArray("4.1", "Forward Plus")
+run/max_fps=60
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameData="*res://scripts/GameData.gd"
+TopScore="*res://scripts/top_score.gd"
+
+[debug]
+
+file_logging/enable_file_logging=true
+settings/stdout/print_fps=true
+
+[display]
+
+mouse_cursor/custom_image="res://kenney_ui-pack-rpg-expansion/PNG/cursorGauntlet_blue.png"
+
+[input]
+
+mouse1={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(264, 2),"global_position":Vector2(268, 45),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"

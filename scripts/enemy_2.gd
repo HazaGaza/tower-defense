@@ -1,7 +1,7 @@
 extends PathFollow2D
 var speed = 100
-var hp = 150
-@onready var health_bar = get_node("CharacterBody2D/healthbar")
+var hp = 80
+@onready var health_bar = get_node("CharacterBody2D/health_bar")
 
 func _ready():
 	health_bar.max_value = hp

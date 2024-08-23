@@ -57,7 +57,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Firing",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xt4a2"]
