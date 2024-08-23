@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://23ainmn4fj2q"]
+[gd_scene load_steps=9 format=3 uid="uid://23ainmn4fj2q"]
 
 [ext_resource type="Script" path="res://scripts/Path2D.gd" id="1_1bt2s"]
 [ext_resource type="Script" path="res://scripts/map_1.gd" id="1_pyb5f"]
@@ -147,8 +147,6 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 sources/0 = SubResource("TileSetAtlasSource_xhgso")
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yhcti"]
-
 [node name="map_1" type="Node2D"]
 position = Vector2(-1, -1)
 script = ExtResource("1_pyb5f")
@@ -161,9 +159,6 @@ scale = Vector2(3, 3)
 z_index = 4
 position = Vector2(-11, -0.333344)
 shape = SubResource("RectangleShape2D_m425x")
-
-[node name="enemy spawn timer" type="Timer" parent="."]
-autostart = true
 
 [node name="Path1" type="Path2D" parent="."]
 z_index = 1620
@@ -189,42 +184,4 @@ layer_1/tile_data = PackedInt32Array(-196609, 851968, 7, -524286, 851968, 7, -52
 [node name="Node" type="Node" parent="."]
 script = ExtResource("7_lwbvs")
 
-[node name="Corner1" type="Area2D" parent="."]
-
-[node name="Corner1" type="CollisionShape2D" parent="Corner1"]
-position = Vector2(294, 140)
-shape = SubResource("CircleShape2D_yhcti")
-
-[node name="Corner2" type="Area2D" parent="."]
-
-[node name="Corner2" type="CollisionShape2D" parent="Corner2"]
-position = Vector2(297, 258)
-shape = SubResource("CircleShape2D_yhcti")
-
-[node name="Corner3" type="Area2D" parent="."]
-
-[node name="Corner3" type="CollisionShape2D" parent="Corner3"]
-position = Vector2(126, 267)
-shape = SubResource("CircleShape2D_yhcti")
-
-[node name="Corner4" type="Area2D" parent="."]
-
-[node name="Corner4" type="CollisionShape2D" parent="Corner4"]
-position = Vector2(122, 413)
-shape = SubResource("CircleShape2D_yhcti")
-
-[node name="Corner5" type="Area2D" parent="."]
-
-[node name="Corner5" type="CollisionShape2D" parent="Corner5"]
-position = Vector2(624, 415)
-shape = SubResource("CircleShape2D_yhcti")
-
-[node name="Corner6" type="Area2D" parent="."]
-
-[node name="Corner6" type="CollisionShape2D" parent="Corner6"]
-position = Vector2(637, 200)
-shape = SubResource("CircleShape2D_yhcti")
-
 [connection signal="body_entered" from="end" to="." method="_on_end_body_entered"]
-[connection signal="timeout" from="enemy spawn timer" to="Path1" method="_on_enemy_spawn_timer_timeout"]
-[connection signal="body_entered" from="Corner1" to="." method="_on_corner_1_body_entered"]

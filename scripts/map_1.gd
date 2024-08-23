@@ -13,4 +13,3 @@ func _physics_process(delta):
 
 func _on_end_body_entered(body):
 	body.queue_free()
-
