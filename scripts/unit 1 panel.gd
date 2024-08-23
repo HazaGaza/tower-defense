@@ -15,9 +15,8 @@ func _on_gui_input(event):
 		#left click drag
 		get_child(1).global_position = event.global_position
 		var mapPath = get_tree().get_root().get_node("map_1/TileMap")
-
 		var tile = mapPath.local_to_map(get_global_mouse_position())
-		currTile = mapPath.get_cell_atlas_coords(0, 0,tile)
+		currTile = mapPath.get_cell_atlas_coords(0,tile)
 		if (currTile == Vector2i(6,7)):
 			get_child(1).get_node("Area").modulate = Color(0,255,0)
 		else:
@@ -30,6 +29,7 @@ func _on_gui_input(event):
 		tempTower.global_position = event.global_position
 		path.add_child(tempTower)
 		tempTower.get_node("Area").hide()
+		tempTower.scale = Vector2(3,3)
 	else:
 		if get_child_count() > 1:
 			get_child(1).queue_free()
