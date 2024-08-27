@@ -88,6 +88,7 @@ animation = &"Firing"
 offset = Vector2(0, -16.5161)
 
 [node name="barrel" type="Marker2D" parent="TowerHead"]
+visible = false
 position = Vector2(0, -33.0322)
 scale = Vector2(1.23871, 1.12941)
 
