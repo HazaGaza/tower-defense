@@ -25,10 +25,6 @@ func select_enemy() :
 	var enemy_index = enemy_progress_array.find(max_offset)
 	enemy = enemy_array[enemy_index]
 func shoot():
-	animated_sprite.play("Firing") 
-	var b = arrow.instantiate()
-	get_parent().add_child(b)
-	b.transform = $TowerHead/barrel.global_transform
 	gun_ready = false
 	enemy.on_hit(GameData.tower_data_["damage"])
 	await get_tree().create_timer(GameData.tower_data_["rof"]).timeout 
@@ -36,6 +32,8 @@ func shoot():
 	
 func _on_sight_body_entered(body):
 	enemy_array.append(body.get_parent())
+	for _i in body.get_children():
+		print(_i)
 
 func _on_sight_body_exited(body):
 	enemy_array.erase(body.get_parent())

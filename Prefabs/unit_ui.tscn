@@ -34,6 +34,12 @@ offset_right = 811.0
 offset_bottom = 50.0
 text = "Score = "
 
+[node name="FPS" type="RichTextLabel" parent="."]
+offset_left = 21.0
+offset_top = 18.0
+offset_right = 191.0
+offset_bottom = 42.0
+
 [node name="Panel2" parent="." instance=ExtResource("2_ai2qs")]
 offset_left = 880.0
 offset_top = 36.0

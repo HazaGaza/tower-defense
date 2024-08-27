@@ -24,7 +24,6 @@ TopScore="*res://scripts/top_score.gd"
 [debug]
 
 file_logging/enable_file_logging=true
-settings/stdout/print_fps=true
 
 [display]
 

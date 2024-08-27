@@ -1,22 +1,24 @@
 extends PathFollow2D
 var speed = 150
 var hp = 40
-signal death
 @onready var health_bar = get_node("CharacterBody2D/healthbar")
-
+@onready var amount = 0
+@onready var alive = true
 func _ready():
 	health_bar.max_value = hp
 	health_bar.value = hp
 	add_to_group("enemy")
 
 func _physics_process(delta):
-	move(delta)
+	if alive == true:
+		move(delta)
 func move(delta):
 	set_progress(get_progress() + speed * delta )
 func on_hit(damage):
+	amount += 1
 	hp -= damage
 	health_bar.value = hp
+	print (str(amount)+"sigma")
 	if hp <= 0:
-		print("sigma")
-		death.emit()
+		alive == false
 		self.queue_free()
