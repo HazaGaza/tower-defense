@@ -21,9 +21,9 @@ func retrieve_wave_data():
 
 func spawn_enemies(wave_data):
 	for i in wave_data:
-		var scene = load("res://Prefabs/" + i[0] + ".tscn") as PackedScene
-		if scene:  # Check if the scene is loaded successfully
-			var new_enemy = scene.instantiate()
+		var skibidi = load("res://Prefabs/" + i[0] + ".tscn") as PackedScene
+		if skibidi:  # Check if the scene is loaded successfully
+			var new_enemy = skibidi.instantiate()
 			print(new_enemy)
 			add_child(new_enemy)
 			await(get_tree().create_timer(i[1])).timeout

@@ -16,6 +16,8 @@ func _on_gui_input(event):
 		get_child(1).global_position = event.global_position
 		var mapPath = get_tree().get_root().get_node("map_1/TileMap")
 		var tile = mapPath.local_to_map(get_global_mouse_position())
+		tempTower.get_node("Area").set_radius(50)
+		tempTower.get_node("Sight/CollisionShape2D").set_radius(50)
 		currTile = mapPath.get_cell_atlas_coords(0,tile)
 		if (currTile == Vector2i(6,7)):
 			get_child(1).get_node("Area").modulate = Color(0,255,0)

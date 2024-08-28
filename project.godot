@@ -13,13 +13,11 @@ config_version=5
 config/name="tower defense"
 run/main_scene="res://Prefabs/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
-run/max_fps=60
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameData="*res://scripts/GameData.gd"
-TopScore="*res://scripts/top_score.gd"
 
 [debug]
 

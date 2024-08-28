@@ -11,7 +11,6 @@ func _physics_process(_delta):
 
 
 func _on_play_pressed():
-	get_tree().change_scene_to_file("res://Prefabs/map_1.tscn")
 	# Queue the current scene to free on the next frame:
 	var root_node = get_tree().get_root()
 	# Load in some scene from our project files:

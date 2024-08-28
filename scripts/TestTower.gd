@@ -32,8 +32,6 @@ func shoot():
 	
 func _on_sight_body_entered(body):
 	enemy_array.append(body.get_parent())
-	for _i in body.get_children():
-		print(_i)
 
 func _on_sight_body_exited(body):
 	enemy_array.erase(body.get_parent())
