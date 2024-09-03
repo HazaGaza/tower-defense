@@ -4,7 +4,7 @@ class_name enemy_path
 @onready var path_prefab1 = preload("res://Prefabs/enemy_2.tscn")
 var current_wave = 0
 var enemies_in_wave = 0
-# Define the wave data, where each element is a list containing the enemy type and delay
+# #enemy types and delay for each wave
 var waves = [
 	[["enemy", 0.7], ["enemy_2", 0.1]],  # Wave 1
 	[["enemy", 0.5], ["enemy", 0.5], ["enemy_2", 0.2]],  # Wave 2
@@ -17,7 +17,7 @@ func _ready():
 func start_next_wave():
 	if current_wave < waves.size():
 		var wave_data = retrieve_wave_data()
-		await get_tree().create_timer(0.2).timeout  # padding so waves don't start instantly
+		await get_tree().create_timer(0.2).timeout  # padding so waves don't start insta
 		spawn_enemies(wave_data)
 	else:
 		print("All waves completed")
@@ -39,6 +39,3 @@ func spawn_enemies(wave_data):
 		else:
 			print("Failed to load scene: res://Prefabs/" + i[0] + ".tscn")
 
-func start_next_wave_with_delay(delay):
-	await get_tree().create_timer(delay).timeout
-	start_next_wave()
