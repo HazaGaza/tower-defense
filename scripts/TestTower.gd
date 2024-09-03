@@ -16,6 +16,8 @@ func _physics_process(delta):
 func turn():
 	get_node("TowerHead").look_at(enemy.global_position)
 	get_node("TowerHead/barrel").look_at(enemy.position)
+	
+	
 	get_node("TowerHead").rotation_degrees += 90
 func select_enemy() :
 	var enemy_progress_array = []
