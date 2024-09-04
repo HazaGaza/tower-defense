@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://3y8p02i1fbj"]
+
+[ext_resource type="PackedScene" uid="uid://pjdcptbtaroe" path="res://Prefabs/enemy_2.tscn" id="1_uacix"]
+
+[node name="enemy2" instance=ExtResource("1_uacix")]
+
+[node name="health_bar" parent="CharacterBody2D" index="1"]
+tint_progress = Color(0.94902, 0.294118, 1, 1)
