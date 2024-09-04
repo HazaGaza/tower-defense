@@ -16,4 +16,4 @@ func on_hit(damage):
 	if hp <= 0:
 		self.queue_free()
 		print("dead")
-		TopScore.score += 2
+		TopScore.score += 3
