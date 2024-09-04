@@ -19,3 +19,4 @@ func on_hit(damage):
 	if hp <= 0:
 		self.queue_free()
 		TopScore.score += 1
+		TopScore.money += 50
