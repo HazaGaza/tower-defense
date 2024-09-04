@@ -10,13 +10,16 @@ var waves = [
 	[["enemy", 0.5], ["enemy", 0.5], ["enemy_2", 0.2]],  # Wave 2
 	[["enemy_2", 0.3], ["enemy", 0.4], ["enemy_2", 0.3], ["enemy", 0.2]]  # Wave 3
 ]
-
-func _ready():
+func _on_play_next_wave_pressed():
 	start_next_wave()
-
+	print("skibidi")
+	
 func start_next_wave():
 	if current_wave < waves.size():
+		print(current_wave)
 		var wave_data = retrieve_wave_data()
+		print(wave_data)
+		print(waves)
 		await get_tree().create_timer(0.2).timeout  # padding so waves don't start insta
 		spawn_enemies(wave_data)
 	else:
@@ -27,6 +30,7 @@ func retrieve_wave_data():
 	current_wave += 1
 	enemies_in_wave = wave_data.size()
 	return wave_data
+	print(wave_data)
 
 func spawn_enemies(wave_data):
 	for i in wave_data:
