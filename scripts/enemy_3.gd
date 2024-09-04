@@ -7,7 +7,8 @@ func _ready():
 	health_bar.max_value = hp
 	health_bar.value = hp
 	add_to_group("enemy")
-	animated_sprite.play("fly_right")
+	animated_sprite.play("fly_left")
+	animated_sprite.flip_h()
 func _physics_process(delta):
 	move(delta)
 func move(delta):
@@ -18,4 +19,4 @@ func on_hit(damage):
 	if hp <= 0:
 		self.queue_free()
 		print("dead")
-		TopScore.score += 2
+		TopScore.score += 3

@@ -157,6 +157,8 @@ script = ExtResource("1_f0315")
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+position = Vector2(1.13687e-13, 4.76837e-07)
+scale = Vector2(1.26042, 0.927083)
 sprite_frames = SubResource("SpriteFrames_l7nam")
 animation = &"fly_right"
 

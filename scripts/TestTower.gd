@@ -11,6 +11,7 @@ func _physics_process(delta):
 		turn()
 		if gun_ready == true:
 			shoot()
+			animated_sprite.play("fire")
 	else:
 		enemy = null
 func turn():

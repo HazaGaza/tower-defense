@@ -56,7 +56,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_icaqj")
 }],
 "loop": false,
-"name": &"Firing",
+"name": &"fire",
 "speed": 6.0
 }]
 
@@ -84,7 +84,7 @@ z_index = 1
 position = Vector2(0, -8)
 scale = Vector2(0.265625, 0.242188)
 sprite_frames = SubResource("SpriteFrames_k8a22")
-animation = &"Firing"
+animation = &"fire"
 offset = Vector2(0, -16.5161)
 
 [node name="barrel" type="Marker2D" parent="TowerHead"]
