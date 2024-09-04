@@ -4,7 +4,7 @@ class_name enemy_path
 @onready var path_prefab1 = preload("res://Prefabs/enemy_2.tscn")
 var current_wave = 0
 var enemies_in_wave = 0
-# #enemy types and delay for each wave
+# #enemy types and delay for each enemy :3 	
 var waves = [
 	[["enemy", 0.7], ["enemy_2", 0.1]],  # Wave 1
 	[["enemy", 0.5], ["enemy", 0.5], ["enemy_2", 0.2]],  # Wave 2
