@@ -7,7 +7,13 @@ var current_wave = 0
 var enemies_in_wave = 0
 # Formulas for enemy spawning
 func get_easy_enemy_count(wave):
-	return 1 * pow(2, wave - 1)
+	if wave>=5:
+		return 1 * pow(1.5, wave - 1)
+	elif wave > 10:
+		return 0
+	else:
+		while wave < 5:
+			return 1 * pow(2, wave - 1)
 
 func get_hard_enemy_count(wave):
 	return 1 * pow(1.5, wave - 1)
