@@ -185,10 +185,10 @@ layer_1/tile_data = PackedInt32Array(-196609, 851968, 7, -524286, 851968, 7, -52
 script = ExtResource("7_lwbvs")
 
 [node name="Play Next Wave" type="Button" parent="."]
-offset_left = 516.0
-offset_top = 24.0
-offset_right = 620.0
-offset_bottom = 55.0
+offset_left = 699.0
+offset_top = 599.0
+offset_right = 803.0
+offset_bottom = 630.0
 text = "NEXT WAVE "
 
 [connection signal="body_entered" from="end" to="." method="_on_end_body_entered"]

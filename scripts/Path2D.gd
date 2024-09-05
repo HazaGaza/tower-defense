@@ -16,13 +16,15 @@ func get_easy_enemy_count(wave):
 			return 1 * pow(2, wave - 1)
 
 func get_hard_enemy_count(wave):
-	return 1 * pow(1.5, wave - 1)
-
+	if wave>=10:
+		return 1 * pow(1, wave - 1)
+	elif wave > 15:
+		return 0
+	else:
+		while wave < 10:
+			return 1 * pow(1.5, wave - 1)
 func get_hardest_enemy_count(wave):
 	return 0.5 * pow(1.2, wave - 1)
-
-func _ready():
-	start_next_wave()
 
 func start_next_wave():
 	print("Wave: ", current_wave + 1)
@@ -37,7 +39,10 @@ func retrieve_wave_data():
 	wave_data.append(["hard", get_hard_enemy_count(current_wave + 1)])
 	wave_data.append(["hardest", get_hardest_enemy_count(current_wave + 1)])
 	return wave_data
+<<<<<<< Updated upstream
 	
+=======
+>>>>>>> Stashed changes
 
 func spawn_enemies(wave_data):
 	for i in wave_data:

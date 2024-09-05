@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c37fjbgt2l2a8"
-path="res://.godot/imported/Tower 01 - Level 03 - Weapon.png-08d9a96d98e8e03a35f4def6484fc318.ctex"
+path="res://.godot/imported/Tower 01 - Level 03 - Weapon.png-3651937479c5239cbf6601515d127383.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 03 - Weapon.png"
-dest_files=["res://.godot/imported/Tower 01 - Level 03 - Weapon.png-08d9a96d98e8e03a35f4def6484fc318.ctex"]
+source_file="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 02/Spritesheets/Tower 01/Spritesheets/Tower 01 - Level 03 - Weapon.png"
+dest_files=["res://.godot/imported/Tower 01 - Level 03 - Weapon.png-3651937479c5239cbf6601515d127383.ctex"]
 
 [params]
 

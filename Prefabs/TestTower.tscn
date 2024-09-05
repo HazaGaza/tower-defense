@@ -1,34 +1,34 @@
 [gd_scene load_steps=14 format=3 uid="uid://byrvhjoqnni1a"]
 
 [ext_resource type="Script" path="res://scripts/TestTower.gd" id="1_fu8vk"]
-[ext_resource type="Texture2D" uid="uid://cjofaab30g4no" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png" id="2_knbbb"]
+[ext_resource type="Texture2D" uid="uid://cjofaab30g4no" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 02/Spritesheets/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png" id="2_bhg81"]
 [ext_resource type="Texture2D" uid="uid://dijge5nwsqsh2" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers bases/PNGs/Tower 01A.png" id="3_qnx6h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1d18j"]
 radius = 50.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_icaqj"]
-atlas = ExtResource("2_knbbb")
+atlas = ExtResource("2_bhg81")
 region = Rect2(0, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_o30i2"]
-atlas = ExtResource("2_knbbb")
+atlas = ExtResource("2_bhg81")
 region = Rect2(96, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_886ke"]
-atlas = ExtResource("2_knbbb")
+atlas = ExtResource("2_bhg81")
 region = Rect2(192, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p4p4i"]
-atlas = ExtResource("2_knbbb")
+atlas = ExtResource("2_bhg81")
 region = Rect2(288, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nm0vx"]
-atlas = ExtResource("2_knbbb")
+atlas = ExtResource("2_bhg81")
 region = Rect2(384, 0, 96, 96)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jlncr"]
-atlas = ExtResource("2_knbbb")
+atlas = ExtResource("2_bhg81")
 region = Rect2(480, 0, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_k8a22"]

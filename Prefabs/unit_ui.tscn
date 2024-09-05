@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dh1ueyaq0asbx"]
+[gd_scene load_steps=4 format=3 uid="uid://dh1ueyaq0asbx"]
 
 [ext_resource type="Script" path="res://scripts/score!.gd" id="1_yso37"]
 [ext_resource type="PackedScene" uid="uid://c1xje5qjn5q27" path="res://Prefabs/unit 1 panel.tscn" id="2_ai2qs"]
+[ext_resource type="PackedScene" uid="uid://dcv3ciutxyreh" path="res://Prefabs/unit2panel.tscn" id="3_21rqp"]
 
 [node name="Unit Ui" type="CanvasLayer"]
 layer = 100
@@ -34,6 +35,13 @@ offset_right = 811.0
 offset_bottom = 50.0
 text = "Score = "
 
+[node name="money spread" type="RichTextLabel" parent="."]
+offset_left = 464.0
+offset_top = 27.0
+offset_right = 634.0
+offset_bottom = 51.0
+text = "MONEY = $"
+
 [node name="FPS" type="RichTextLabel" parent="."]
 offset_left = 21.0
 offset_top = 18.0
@@ -41,7 +49,15 @@ offset_right = 191.0
 offset_bottom = 42.0
 
 [node name="Panel2" parent="." instance=ExtResource("2_ai2qs")]
-offset_left = 880.0
-offset_top = 36.0
-offset_right = 966.0
-offset_bottom = 121.0
+offset_left = 898.0
+offset_top = 41.0
+offset_right = 984.0
+offset_bottom = 126.0
+
+[node name="Panel3" parent="." instance=ExtResource("3_21rqp")]
+offset_left = 1026.0
+offset_top = 39.0
+offset_right = 1112.0
+offset_bottom = 124.0
+
+[connection signal="gui_input" from="Panel3" to="Panel3" method="_on_gui_input"]

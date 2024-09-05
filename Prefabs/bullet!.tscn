@@ -1,21 +1,21 @@
 [gd_scene load_steps=8 format=3 uid="uid://bw8clbglisujt"]
 
 [ext_resource type="Script" path="res://scripts/bullet.gd" id="1_umdbx"]
-[ext_resource type="Texture2D" uid="uid://bwd0d1m02rpvv" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Projectile.png" id="2_36x2q"]
+[ext_resource type="Texture2D" uid="uid://bwd0d1m02rpvv" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 02/Spritesheets/Tower 01/Spritesheets/Tower 01 - Level 01 - Projectile.png" id="2_x3sxk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wukpy"]
 size = Vector2(7, 39)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6f4ri"]
-atlas = ExtResource("2_36x2q")
+atlas = ExtResource("2_x3sxk")
 region = Rect2(0, 0, 8, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kay3o"]
-atlas = ExtResource("2_36x2q")
+atlas = ExtResource("2_x3sxk")
 region = Rect2(8, 0, 8, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1eiy6"]
-atlas = ExtResource("2_36x2q")
+atlas = ExtResource("2_x3sxk")
 region = Rect2(16, 0, 8, 40)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_clvtg"]

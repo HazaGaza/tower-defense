@@ -19,4 +19,8 @@ func on_hit(damage):
 		self.queue_free()
 		print("dead")
 		TopScore.score += 2
+<<<<<<< Updated upstream
 		TopScore.money += 150
+=======
+		TopScore.money += 100
+>>>>>>> Stashed changes

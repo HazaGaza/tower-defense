@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://scripts/unit 1 panel.gd" id="1_xs1fy"]
 [ext_resource type="Texture2D" uid="uid://dijge5nwsqsh2" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers bases/PNGs/Tower 01A.png" id="2_kc8xp"]
-[ext_resource type="Texture2D" uid="uid://cjofaab30g4no" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png" id="3_it6pm"]
+[ext_resource type="Texture2D" uid="uid://cjofaab30g4no" path="res://Tower Sprites/Foozle_2DS0017_Spire_TowerPack_1/Towers Weapons/Tower 02/Spritesheets/Tower 01/Spritesheets/Tower 01 - Level 01 - Weapon.png" id="3_som3l"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ilfo4"]
-atlas = ExtResource("3_it6pm")
+atlas = ExtResource("3_som3l")
 region = Rect2(0, 0, 96, 96)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xoitw"]
@@ -40,5 +40,12 @@ metadata/_edit_group_ = true
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Tower01a"]
 position = Vector2(0, -13)
 sprite_frames = SubResource("SpriteFrames_xoitw")
+
+[node name="COST" type="RichTextLabel" parent="Tower01a"]
+offset_left = -18.0
+offset_top = 64.0
+offset_right = 22.0
+offset_bottom = 104.0
+text = "$150"
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]

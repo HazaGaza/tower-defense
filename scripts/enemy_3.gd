@@ -20,3 +20,4 @@ func on_hit(damage):
 		self.queue_free()
 		print("dead")
 		TopScore.score += 3
+		TopScore.money += 150
