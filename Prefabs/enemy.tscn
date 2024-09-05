@@ -160,6 +160,11 @@ script = ExtResource("1_f0315")
 sprite_frames = SubResource("SpriteFrames_l7nam")
 animation = &"fly_right"
 
+[node name="corner1" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 2.3
+one_shot = true
+autostart = true
+
 [node name="healthbar" type="TextureProgressBar" parent="CharacterBody2D"]
 offset_left = -30.0
 offset_top = -30.0
@@ -175,3 +180,5 @@ tint_progress = Color(0, 0.772549, 0, 1)
 [node name="bodyshape" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(-1, -6)
 shape = SubResource("RectangleShape2D_2fpbn")
+
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner1" to="." method="_on_corner_1_timeout"]

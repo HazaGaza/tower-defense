@@ -36,6 +36,8 @@ func retrieve_wave_data():
 	wave_data.append(["easy", get_easy_enemy_count(current_wave + 1)])
 	wave_data.append(["hard", get_hard_enemy_count(current_wave + 1)])
 	wave_data.append(["hardest", get_hardest_enemy_count(current_wave + 1)])
+	return wave_data
+	
 
 func spawn_enemies(wave_data):
 	for i in wave_data:

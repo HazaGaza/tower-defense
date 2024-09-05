@@ -20,3 +20,8 @@ func on_hit(damage):
 		self.queue_free()
 		TopScore.score += 1
 		TopScore.money += 50
+
+func _on_corner_1_timeout():
+	animated_sprite.stop()
+	
+	animated_sprite.play("fly_down")
