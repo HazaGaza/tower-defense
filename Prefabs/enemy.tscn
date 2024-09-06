@@ -165,6 +165,31 @@ wait_time = 2.3
 one_shot = true
 autostart = true
 
+[node name="corner2" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 2.8
+one_shot = true
+autostart = true
+
+[node name="corner3" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 4.2
+one_shot = true
+autostart = true
+
+[node name="corner4" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 4.8
+one_shot = true
+autostart = true
+
+[node name="corner5" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 8.8
+one_shot = true
+autostart = true
+
+[node name="corner6" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 9.7
+one_shot = true
+autostart = true
+
 [node name="healthbar" type="TextureProgressBar" parent="CharacterBody2D"]
 offset_left = -30.0
 offset_top = -30.0
@@ -182,3 +207,8 @@ position = Vector2(-1, -6)
 shape = SubResource("RectangleShape2D_2fpbn")
 
 [connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner1" to="." method="_on_corner_1_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner2" to="." method="_on_corner_2_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner3" to="." method="_on_corner_3_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner4" to="." method="_on_corner_4_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner5" to="." method="_on_corner_5_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner6" to="." method="_on_corner_6_timeout"]
