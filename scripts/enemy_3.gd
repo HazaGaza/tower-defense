@@ -8,7 +8,6 @@ func _ready():
 	health_bar.value = hp
 	add_to_group("enemy")
 	animated_sprite.play("fly_left")
-	animated_sprite.flip_h()
 func _physics_process(delta):
 	move(delta)
 func move(delta):

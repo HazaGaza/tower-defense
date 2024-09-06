@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://3y8p02i1fbj"]
+[gd_scene load_steps=30 format=3 uid="uid://dqt0aavfvbqye"]
 
 [ext_resource type="Script" path="res://scripts/enemy_3.gd" id="1_oyspg"]
 [ext_resource type="Texture2D" uid="uid://dglcvkdhi0ylh" path="res://World Tilesheet/new_gradient_texture_2d.tres" id="2_08100"]
@@ -200,7 +200,7 @@ script = ExtResource("1_oyspg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
 sprite_frames = SubResource("SpriteFrames_dd62x")
-animation = &"fly_left"
+animation = &"fly_down"
 
 [node name="health_bar" type="TextureProgressBar" parent="CharacterBody2D"]
 offset_left = -30.0

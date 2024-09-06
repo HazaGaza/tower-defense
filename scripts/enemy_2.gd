@@ -21,4 +21,19 @@ func on_hit(damage):
 		TopScore.score += 2
 		TopScore.money += 100
 
+func _on_corner_1_timeout():
+	animated_sprite.stop()
+	animated_sprite.rotation_degrees -= 90
+	animated_sprite.play("fly_down")
+
+func _on_corner_2_timeout():
+	animated_sprite.stop()
+	animated_sprite.flip_h = true
+	animated_sprite.rotation_degrees -= 90
+	animated_sprite.play("fly_right")
+
+func _on_corner_3_timeout():
+	animated_sprite.stop()
+	animated_sprite.rotation_degrees += 90
+	animated_sprite.play("fly_down")
 
