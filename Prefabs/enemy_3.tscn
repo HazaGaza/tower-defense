@@ -202,6 +202,36 @@ script = ExtResource("1_oyspg")
 sprite_frames = SubResource("SpriteFrames_dd62x")
 animation = &"fly_down"
 
+[node name="corner1" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 3.4
+one_shot = true
+autostart = true
+
+[node name="corner2" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 4.27
+one_shot = true
+autostart = true
+
+[node name="corner3" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 6.2
+one_shot = true
+autostart = true
+
+[node name="corner4" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 7.2
+one_shot = true
+autostart = true
+
+[node name="corner5" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 13.1
+one_shot = true
+autostart = true
+
+[node name="corner6" type="Timer" parent="CharacterBody2D/AnimatedSprite2D"]
+wait_time = 14.5
+one_shot = true
+autostart = true
+
 [node name="health_bar" type="TextureProgressBar" parent="CharacterBody2D"]
 offset_left = -30.0
 offset_top = -30.0
@@ -216,3 +246,10 @@ tint_progress = Color(0.94902, 0.294118, 1, 1)
 
 [node name="bodyshape" type="CollisionShape2D" parent="CharacterBody2D"]
 shape = SubResource("RectangleShape2D_g0ehk")
+
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner1" to="." method="_on_corner_1_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner2" to="." method="_on_corner_2_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner3" to="." method="_on_corner_3_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner4" to="." method="_on_corner_4_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner5" to="." method="_on_corner_5_timeout"]
+[connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner6" to="." method="_on_corner_6_timeout"]

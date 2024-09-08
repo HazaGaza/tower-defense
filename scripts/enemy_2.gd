@@ -37,3 +37,20 @@ func _on_corner_3_timeout():
 	animated_sprite.rotation_degrees += 90
 	animated_sprite.play("fly_down")
 
+func _on_corner_4_timeout():
+	animated_sprite.stop()
+	animated_sprite.flip_h = false
+	animated_sprite.rotation_degrees += 90
+	animated_sprite.play("fly_right")
+
+func _on_corner_5_timeout():
+	animated_sprite.stop()
+	animated_sprite.rotation_degrees += 90
+	animated_sprite.play("fly_up")
+
+func _on_corner_6_timeout():
+	animated_sprite.stop()
+	animated_sprite.rotation_degrees += 90
+	animated_sprite.flip_v = true
+	animated_sprite.flip_h = true
+	animated_sprite.play("fly_right")
