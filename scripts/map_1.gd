@@ -13,3 +13,6 @@ func _physics_process(delta):
 
 func _on_end_body_entered(body):
 	body.queue_free()
+	print(body.get_parent().hp)
+	var damage = body.get_parent().hp
+	TopScore.health -=damage

@@ -32,6 +32,7 @@ func start_next_wave():
 	await get_tree().create_timer(0.2).timeout # Small delay before starting wave
 	spawn_enemies(wave_data)
 	current_wave += 1
+	TopScore.current_wave += 1
 
 func retrieve_wave_data():
 	var wave_data = []

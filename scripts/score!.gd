@@ -1,17 +1,14 @@
 extends CanvasLayer
 var score = 0
 var enemy = preload("res://Prefabs/enemy.tscn")
+@onready var health_bar = get_node("Healthy")
 func _ready():
 	get_node("RichTextLabel").set_text("Score = "+str(TopScore.score))
 	get_node("money spread").set_text("Money = $"+str(TopScore.money))
-func _physics_process(delta: float):
-	get_node("FPS").set_text("FPS %d" % Engine.get_frames_per_second())
-
+	health_bar.max_value = TopScore.health
+	health_bar.value = TopScore.health
 func _process(delta):
 	get_node("RichTextLabel").set_text("Score = "+str(TopScore.score))
 	get_node("money spread").set_text("Money = $"+str(TopScore.money))
-
-func _on_play_next_wave_pressed():
-	pass # Replace with function body.
-
-
+	health_bar.value = TopScore.health
+	get_node("Wave_counter").set_text("Current Wave = "+str(TopScore.current_wave) )

@@ -37,5 +37,4 @@ func _on_gui_input(event):
 			tempTower.queue_free()
 			print("Too Poor")
 	else:
-		if get_child_count() > 1:
-			get_child(1).queue_free()
+		pass

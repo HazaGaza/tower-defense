@@ -120,3 +120,4 @@ shape = SubResource("RectangleShape2D_gs4ca")
 
 [connection signal="body_entered" from="Sight" to="." method="_on_sight_body_entered"]
 [connection signal="body_exited" from="Sight" to="." method="_on_sight_body_exited"]
+[connection signal="animation_finished" from="TowerHead" to="." method="_on_tower_head_animation_finished"]

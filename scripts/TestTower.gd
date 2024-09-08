@@ -38,3 +38,7 @@ func _on_sight_body_entered(body):
 
 func _on_sight_body_exited(body):
 	enemy_array.erase(body.get_parent())
+
+func _on_tower_head_animation_finished():
+	animated_sprite.play("IDLE")
+

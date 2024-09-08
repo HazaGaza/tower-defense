@@ -313,6 +313,13 @@ sprite_frames = SubResource("SpriteFrames_u55go")
 animation = &"sigma"
 metadata/_edit_group_ = true
 
+[node name="COST" type="RichTextLabel" parent="TOWER_BASE"]
+offset_left = -21.4136
+offset_top = 108.583
+offset_right = 18.5864
+offset_bottom = 148.583
+text = "$250"
+
 [node name="TowerHead" type="AnimatedSprite2D" parent="TOWER_BASE"]
 z_index = 12
 position = Vector2(0, 1.33334)
@@ -321,12 +328,3 @@ sprite_frames = SubResource("SpriteFrames_22dtc")
 animation = &"NOTSOIDLE"
 offset = Vector2(0, -16.5161)
 metadata/_edit_group_ = true
-
-[node name="COST" type="RichTextLabel" parent="."]
-layout_mode = 0
-offset_left = 33.0
-offset_top = 60.0
-offset_right = 73.0
-offset_bottom = 100.0
-scale = Vector2(0.5, 0.5)
-text = "$250"

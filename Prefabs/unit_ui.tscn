@@ -1,12 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://dh1ueyaq0asbx"]
+[gd_scene load_steps=5 format=3 uid="uid://dh1ueyaq0asbx"]
 
 [ext_resource type="Script" path="res://scripts/score!.gd" id="1_yso37"]
 [ext_resource type="PackedScene" uid="uid://c1xje5qjn5q27" path="res://Prefabs/unit 1 panel.tscn" id="2_ai2qs"]
 [ext_resource type="PackedScene" uid="uid://dcv3ciutxyreh" path="res://Prefabs/unit2panel.tscn" id="3_21rqp"]
+[ext_resource type="Texture2D" uid="uid://dglcvkdhi0ylh" path="res://World Tilesheet/new_gradient_texture_2d.tres" id="4_0jrhh"]
 
 [node name="Unit Ui" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_yso37")
+
+[node name="Wave_counter" type="RichTextLabel" parent="."]
+z_index = 1
+offset_left = 891.0
+offset_top = 386.0
+offset_right = 1061.0
+offset_bottom = 410.0
+text = "Current wave ="
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = 843.0
@@ -29,24 +38,18 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 641.0
-offset_top = 26.0
-offset_right = 811.0
-offset_bottom = 50.0
+offset_left = 895.0
+offset_top = 339.0
+offset_right = 1065.0
+offset_bottom = 363.0
 text = "Score = "
 
 [node name="money spread" type="RichTextLabel" parent="."]
-offset_left = 464.0
-offset_top = 27.0
-offset_right = 634.0
-offset_bottom = 51.0
+offset_left = 894.0
+offset_top = 259.0
+offset_right = 1064.0
+offset_bottom = 283.0
 text = "MONEY = $"
-
-[node name="FPS" type="RichTextLabel" parent="."]
-offset_left = 21.0
-offset_top = 18.0
-offset_right = 191.0
-offset_bottom = 42.0
 
 [node name="Panel2" parent="." instance=ExtResource("2_ai2qs")]
 offset_left = 898.0
@@ -55,9 +58,29 @@ offset_right = 984.0
 offset_bottom = 126.0
 
 [node name="Panel3" parent="." instance=ExtResource("3_21rqp")]
-offset_left = 1026.0
-offset_top = 39.0
-offset_right = 1112.0
-offset_bottom = 124.0
+offset_left = 1010.0
+offset_top = 41.0
+offset_right = 1096.0
+offset_bottom = 126.0
+
+[node name="health" type="RichTextLabel" parent="."]
+offset_left = 939.0
+offset_top = 144.0
+offset_right = 1109.0
+offset_bottom = 168.0
+text = "HEALTH BAR"
+
+[node name="Healthy" type="TextureProgressBar" parent="."]
+offset_left = 886.0
+offset_top = 170.0
+offset_right = 891.0
+offset_bottom = 185.0
+scale = Vector2(43.8436, 1.97793)
+value = 50.0
+nine_patch_stretch = true
+texture_under = ExtResource("4_0jrhh")
+texture_progress = ExtResource("4_0jrhh")
+tint_under = Color(0.4, 0.4, 0.4, 1)
+tint_progress = Color(0, 0.772549, 0, 1)
 
 [connection signal="gui_input" from="Panel3" to="Panel3" method="_on_gui_input"]
