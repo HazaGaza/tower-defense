@@ -206,6 +206,25 @@ tint_progress = Color(0, 0.772549, 0, 1)
 position = Vector2(-1, -6)
 shape = SubResource("RectangleShape2D_2fpbn")
 
+[node name="bleh" type="CPUParticles2D" parent="."]
+z_index = 7
+position = Vector2(1, -18)
+emitting = false
+amount = 160
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 25.89
+spread = 180.0
+initial_velocity_min = 348.2
+initial_velocity_max = 348.25
+angular_velocity_min = 334.55
+angular_velocity_max = 334.55
+color = Color(1, 0, 0, 1)
+
 [connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner1" to="." method="_on_corner_1_timeout"]
 [connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner2" to="." method="_on_corner_2_timeout"]
 [connection signal="timeout" from="CharacterBody2D/AnimatedSprite2D/corner3" to="." method="_on_corner_3_timeout"]

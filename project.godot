@@ -13,6 +13,7 @@ config_version=5
 config/name="tower defense"
 run/main_scene="res://Prefabs/main_menu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+boot_splash/image="res://alpha tower defense background.webp"
 config/icon="res://icon.svg"
 
 [autoload]
@@ -27,6 +28,12 @@ file_logging/enable_file_logging=true
 [display]
 
 mouse_cursor/custom_image="res://kenney_ui-pack-rpg-expansion/PNG/cursorGauntlet_blue.png"
+
+[importer_defaults]
+
+mp3={
+"loop": true
+}
 
 [input]
 

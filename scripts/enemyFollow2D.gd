@@ -4,6 +4,7 @@ var hp = 40
 signal death
 @onready var animated_sprite = $CharacterBody2D/AnimatedSprite2D
 @onready var health_bar = get_node("CharacterBody2D/healthbar")
+@onready var particle = get_node("bleh")
 func _ready():
 	health_bar.max_value = hp
 	health_bar.value = hp
@@ -16,6 +17,7 @@ func move(delta):
 func on_hit(damage):
 	hp -= damage
 	health_bar.value = hp
+	particle.set_emitting(true)
 	if hp <= 0:
 		self.queue_free()
 		TopScore.score += 1

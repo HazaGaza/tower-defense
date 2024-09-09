@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://7vm3tim4dp5u"]
+
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="1_7of0s"]
+[ext_resource type="Texture2D" uid="uid://cmce2wb03kli0" path="res://alpha tower defense background.webp" id="2_06p40"]
+
+[node name="Game_over" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7of0s")
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 801.0
+offset_top = 134.0
+offset_right = 923.0
+offset_bottom = 160.0
+text = "WAVE REACHED =
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 464.0
+offset_top = 125.0
+offset_right = -596.0
+offset_bottom = -497.0
+scale = Vector2(2.5, 2.5)
+text = "GAME OVER"
+
+[node name="Play" type="Button" parent="."]
+offset_left = 464.0
+offset_top = 249.0
+offset_right = 681.0
+offset_bottom = 378.0
+text = "Play Again"
+
+[node name="Quit" type="Button" parent="."]
+offset_left = 468.0
+offset_top = 410.0
+offset_right = 684.0
+offset_bottom = 509.0
+text = "Quit
+"
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(577, 323.5)
+scale = Vector2(1.88871, 0.765882)
+texture = ExtResource("2_06p40")
+
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b378fjip5uwc3"
+path="res://.godot/imported/ROY KNOX - Lost In Sound (Magic Free Release).mp3-098976d2c82ceadc5aa31cda3157009b.mp3str"
+
+[deps]
+
+source_file="res://ROY KNOX - Lost In Sound (Magic Free Release).mp3"
+dest_files=["res://.godot/imported/ROY KNOX - Lost In Sound (Magic Free Release).mp3-098976d2c82ceadc5aa31cda3157009b.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -5,20 +5,22 @@ extends Node2D
 var enemy_array = []
 var enemy
 var gun_ready = true
+var is_shooting: bool = true
 func _physics_process(delta):
-	if enemy_array.size() !=0:
-		select_enemy()
-		turn()
-		if gun_ready == true:
-			shoot()
-			animated_sprite.play("fire")
+	if TopScore.health > 0:
+		if enemy_array.size() !=0 and is_shooting:
+			select_enemy()
+			turn()
+			if gun_ready == true:
+				shoot()
+				animated_sprite.play("fire")
+		else:
+			enemy = null
 	else:
-		enemy = null
+		remove_tower()
 func turn():
 	get_node("TowerHead").look_at(enemy.global_position)
 	get_node("TowerHead/barrel").look_at(enemy.position)
-	
-	
 	get_node("TowerHead").rotation_degrees += 90
 func select_enemy() :
 	var enemy_progress_array = []
@@ -32,7 +34,6 @@ func shoot():
 	enemy.on_hit(GameData.tower_data_["damage"])
 	await get_tree().create_timer(GameData.tower_data_["rof"]).timeout 
 	gun_ready = true
-	
 func _on_sight_body_entered(body):
 	enemy_array.append(body.get_parent())
 
@@ -41,4 +42,6 @@ func _on_sight_body_exited(body):
 
 func _on_tower_head_animation_finished():
 	animated_sprite.play("IDLE")
-
+func remove_tower():
+	is_shooting = false  # Stop the shooting logic
+	queue_free()

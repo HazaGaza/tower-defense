@@ -1,6 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2dxysv2l1ina"]
+[gd_scene load_steps=7 format=3 uid="uid://b2dxysv2l1ina"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_6ggoi"]
+[ext_resource type="PackedScene" uid="uid://b16b586k07v47" path="res://Prefabs/audio_stream_player_2d.tscn" id="2_6bxjm"]
+[ext_resource type="Texture2D" uid="uid://bj331c4el0ps5" path="res://dasdasda.jpg" id="2_8jgvs"]
+[ext_resource type="PackedScene" uid="uid://c3bo3lfo8cvb3" path="res://Prefabs/credits.tscn" id="2_hg88w"]
+[ext_resource type="PackedScene" uid="uid://bkx5gho153ory" path="res://Prefabs/audio_settings.tscn" id="4_e1ufk"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_slso8"]
 font_size = 45
@@ -17,16 +21,40 @@ offset_bottom = 130.0
 text = "Tower Defense"
 label_settings = SubResource("LabelSettings_slso8")
 
-[node name="Credits" type="Button" parent="main_menu_ui"]
-layout_mode = 0
-offset_left = 83.0
-offset_top = 345.0
-offset_right = 243.0
-offset_bottom = 409.0
-text = "Credits
-"
+[node name="AudioStreamPlayer2D" parent="main_menu_ui" instance=ExtResource("2_6bxjm")]
 
-[node name="Play" type="Button" parent="main_menu_ui"]
+[node name="CREDITS" parent="main_menu_ui" instance=ExtResource("2_hg88w")]
+visible = false
+layout_mode = 1
+offset_left = -403.0
+offset_top = -98.0
+offset_right = -403.0
+offset_bottom = -98.0
+
+[node name="Audio Settings" parent="main_menu_ui" instance=ExtResource("4_e1ufk")]
+visible = false
+layout_mode = 1
+offset_left = -332.0
+offset_top = -47.0
+offset_right = -332.0
+offset_bottom = -47.0
+
+[node name="Back" type="Button" parent="main_menu_ui"]
+visible = false
+layout_mode = 0
+offset_left = 110.0
+offset_top = 449.0
+offset_right = 160.0
+offset_bottom = 480.0
+scale = Vector2(2, 2)
+text = "BACK"
+
+[node name="Control" type="Control" parent="main_menu_ui"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Play" type="Button" parent="main_menu_ui/Control"]
 layout_mode = 0
 offset_left = 84.0
 offset_top = 136.0
@@ -34,7 +62,7 @@ offset_right = 244.0
 offset_bottom = 200.0
 text = "Play"
 
-[node name="Quit" type="Button" parent="main_menu_ui"]
+[node name="Quit" type="Button" parent="main_menu_ui/Control"]
 layout_mode = 0
 offset_left = 81.0
 offset_top = 446.0
@@ -43,15 +71,34 @@ offset_bottom = 510.0
 text = "Quit
 "
 
-[node name="Settings" type="Button" parent="main_menu_ui"]
+[node name="Credits" type="Button" parent="main_menu_ui/Control"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 345.0
+offset_right = 243.0
+offset_bottom = 409.0
+text = "Credits
+"
+
+[node name="SETTings" type="Button" parent="main_menu_ui/Control"]
 layout_mode = 0
 offset_left = 84.0
-offset_top = 237.0
+offset_top = 239.0
 offset_right = 244.0
-offset_bottom = 301.0
-text = "Settings"
+offset_bottom = 303.0
+text = "Settings
 
-[connection signal="pressed" from="main_menu_ui/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="main_menu_ui/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="main_menu_ui/Quit" to="." method="_on_quit_pressed"]
-[connection signal="pressed" from="main_menu_ui/Settings" to="." method="_on_settings_pressed"]
+"
+icon_alignment = 1
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(573.5, 322.5)
+scale = Vector2(1.68971, 1.25962)
+texture = ExtResource("2_8jgvs")
+
+[connection signal="pressed" from="main_menu_ui/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="main_menu_ui/Control/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="main_menu_ui/Control/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="main_menu_ui/Control/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="main_menu_ui/Control/SETTings" to="." method="_on_set_tings_pressed"]

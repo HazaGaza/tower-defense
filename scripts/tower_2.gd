@@ -3,15 +3,19 @@ extends Node2D
 var enemy_array = []
 var enemy
 var gun_ready = true
+var is_shooting: bool = true
 func _physics_process(delta):
-	if enemy_array.size() !=0:
-		select_enemy()
-		turn()
-		if gun_ready == true:
-			shoot()
-			animated_sprite.play("NOTSOIDLE")
+	if TopScore.health > 0:
+		if enemy_array.size() !=0 and is_shooting:
+			select_enemy()
+			turn()
+			if gun_ready == true:
+				shoot()
+				animated_sprite.play("NOTSOIDLE")
+		else:
+			enemy = null
 	else:
-		enemy = null
+		remove_tower()
 func turn():
 	get_node("TowerHead/barrel").look_at(enemy.global_position)
 func select_enemy() :
@@ -37,3 +41,6 @@ func _on_sight_body_exited(body):
 
 func _on_tower_head_animation_finished():
 	animated_sprite.play("IDLE")
+func remove_tower():
+	is_shooting = false  # Stop the shooting logic
+	queue_free()

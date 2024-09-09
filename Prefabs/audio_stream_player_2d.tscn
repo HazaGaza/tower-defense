@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b16b586k07v47"]
+
+[ext_resource type="AudioStream" uid="uid://b378fjip5uwc3" path="res://ROY KNOX - Lost In Sound (Magic Free Release).mp3" id="1_wi51d"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_wi51d")
+autoplay = true
