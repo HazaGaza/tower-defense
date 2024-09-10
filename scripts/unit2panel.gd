@@ -23,6 +23,7 @@ func _on_gui_input(event):
 			path.add_child(tempTower)
 			tempTower.get_node("Area").hide()
 			tempTower.scale = Vector2(3,3)
+			TopScore.money -= 250
 		elif TopScore.money < 250:
 			get_child(1).queue_free()
 			tempTower.queue_free()
